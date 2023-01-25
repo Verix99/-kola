@@ -1,0 +1,8 @@
+C:\Users\verix\source\repos\POKLADNA_2.0\POKLADNA_2.0\bin\Debug\POKLADNA_2.0.exe.config
+C:\Users\verix\source\repos\POKLADNA_2.0\POKLADNA_2.0\bin\Debug\POKLADNA_2.0.exe
+C:\Users\verix\source\repos\POKLADNA_2.0\POKLADNA_2.0\bin\Debug\POKLADNA_2.0.pdb
+C:\Users\verix\source\repos\POKLADNA_2.0\POKLADNA_2.0\obj\Debug\POKLADNA_2.0.csproj.AssemblyReference.cache
+C:\Users\verix\source\repos\POKLADNA_2.0\POKLADNA_2.0\obj\Debug\POKLADNA_2.0.csproj.CoreCompileInputs.cache
+C:\Users\verix\source\repos\POKLADNA_2.0\POKLADNA_2.0\obj\Debug\POKLADNA_2.0.exe
+C:\Users\verix\source\repos\POKLADNA_2.0\POKLADNA_2.0\obj\Debug\POKLADNA_2.0.pdb
+C:\Users\verix\source\repos\POKLADNA_2.0\POKLADNA_2.0\obj\Debug\POKLADNA_2.0.csproj.SuggestedBindingRedirects.cache

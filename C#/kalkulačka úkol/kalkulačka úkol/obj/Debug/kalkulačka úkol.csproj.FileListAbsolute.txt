@@ -1,0 +1,11 @@
+C:\Users\verix\source\repos\kalkulačka úkol\kalkulačka úkol\bin\Debug\kalkulačka úkol.exe.config
+C:\Users\verix\source\repos\kalkulačka úkol\kalkulačka úkol\bin\Debug\kalkulačka úkol.exe
+C:\Users\verix\source\repos\kalkulačka úkol\kalkulačka úkol\bin\Debug\kalkulačka úkol.pdb
+C:\Users\verix\source\repos\kalkulačka úkol\kalkulačka úkol\obj\Debug\kalkulačka úkol.csproj.AssemblyReference.cache
+C:\Users\verix\source\repos\kalkulačka úkol\kalkulačka úkol\obj\Debug\kalkulačka_úkol.Properties.Resources.resources
+C:\Users\verix\source\repos\kalkulačka úkol\kalkulačka úkol\obj\Debug\kalkulačka úkol.csproj.GenerateResource.cache
+C:\Users\verix\source\repos\kalkulačka úkol\kalkulačka úkol\obj\Debug\kalkulačka úkol.csproj.CoreCompileInputs.cache
+C:\Users\verix\source\repos\kalkulačka úkol\kalkulačka úkol\obj\Debug\kalkulačka úkol.exe
+C:\Users\verix\source\repos\kalkulačka úkol\kalkulačka úkol\obj\Debug\kalkulačka úkol.pdb
+C:\Users\verix\source\repos\kalkulačka úkol\kalkulačka úkol\obj\Debug\kalkulačka_úkol.Kalkulačka.resources
+C:\Users\verix\source\repos\kalkulačka úkol\kalkulačka úkol\obj\Debug\kalkulačka úkol.csproj.SuggestedBindingRedirects.cache

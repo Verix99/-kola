@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POKLADNA_2.0", "POKLADNA_2.0\POKLADNA_2.0.csproj", "{AC22AD0B-BFF5-40A4-94BA-9C834E21E697}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC22AD0B-BFF5-40A4-94BA-9C834E21E697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC22AD0B-BFF5-40A4-94BA-9C834E21E697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC22AD0B-BFF5-40A4-94BA-9C834E21E697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC22AD0B-BFF5-40A4-94BA-9C834E21E697}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4557939C-C2A1-431F-BF1E-41BC9B8A4515}
+	EndGlobalSection
+EndGlobal
