@@ -1,0 +1,15 @@
+Úkol pro zítřejší skupinu : Hra Třídy
+Vytvořte program který:
+1. Vypíše uživateli nějaký intro text, který ho uvede do děje hry
+2. Zeptejte se uživatele na jméno, které bude využité jako jmého hlavní postavy 
+3. Následně se postavě vygeneruje náhodně síla (celé číslo od 1-10)
+4. Vygenerujte postavě HP pomocí vzorce: síla*10
+5. Dál vygenerujte nepřítele, který bude mít také jméno a podle stejných pravidel vygenerujete sílu a HP
+Boj:
+1. Nechte tyto dvě postavy bojovat. 
+2. Výběr útočníka a obránce bude vždy náhodné 
+3. Počet odebraných HP bude vycházet ze vzorce: síla + náhodné číslo (1-6)
+4. Souboj se opakuje dokud mají obě postavy životy 
+5. Pokud jedna z postav umře, hra končím 
+Cvičení realizujete pomocí vlastních tříd, minimální počet tříd jsou 2. 
+Boj se pokuste uživateli přiblížit pomocí popisu boje (např. uživatel uvidí aktuální životy v kole a odebrané životy v boji)
