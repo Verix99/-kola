@@ -1,0 +1,12 @@
+C:\Users\verix\source\repos\PONG hra\PONG hra\bin\Debug\PONG hra.exe.config
+C:\Users\verix\source\repos\PONG hra\PONG hra\bin\Debug\PONG hra.exe
+C:\Users\verix\source\repos\PONG hra\PONG hra\bin\Debug\PONG hra.pdb
+C:\Users\verix\source\repos\PONG hra\PONG hra\obj\Debug\PONG hra.csproj.AssemblyReference.cache
+C:\Users\verix\source\repos\PONG hra\PONG hra\obj\Debug\PONG_hra.Properties.Resources.resources
+C:\Users\verix\source\repos\PONG hra\PONG hra\obj\Debug\PONG hra.csproj.GenerateResource.cache
+C:\Users\verix\source\repos\PONG hra\PONG hra\obj\Debug\PONG hra.csproj.CoreCompileInputs.cache
+C:\Users\verix\source\repos\PONG hra\PONG hra\obj\Debug\PONG hra.exe
+C:\Users\verix\source\repos\PONG hra\PONG hra\obj\Debug\PONG hra.pdb
+C:\Users\verix\source\repos\PONG hra\PONG hra\obj\Debug\PONG_hra.PongMenu.resources
+C:\Users\verix\source\repos\PONG hra\PONG hra\obj\Debug\PONG_hra.PONG.resources
+C:\Users\verix\source\repos\PONG hra\PONG hra\obj\Debug\PONG_hra.PONG_2.resources

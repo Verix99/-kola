@@ -1,0 +1,25 @@
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\bin\Debug\Benchmark.exe.config
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\bin\Debug\Benchmark.exe
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\bin\Debug\Benchmark.pdb
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\obj\Debug\Benchmark.csprojAssemblyReference.cache
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\obj\Debug\Benchmark.Reaction.resources
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\obj\Debug\Benchmark.Menu.resources
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\obj\Debug\Benchmark.Properties.Resources.resources
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\obj\Debug\Benchmark.csproj.GenerateResource.cache
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\obj\Debug\Benchmark.csproj.CoreCompileInputs.cache
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\obj\Debug\Benchmark.exe
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\obj\Debug\Benchmark.pdb
+C:\Users\veprek.pe.2021\source\repos\Benchmark\Benchmark\obj\Debug\Benchmark.Number.resources
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\bin\Debug\Benchmark.exe.config
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\bin\Debug\Benchmark.exe
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\bin\Debug\Benchmark.pdb
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\obj\Debug\Benchmark.csproj.AssemblyReference.cache
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\obj\Debug\Benchmark.Reaction.resources
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\obj\Debug\Benchmark.Number.resources
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\obj\Debug\Benchmark.Menu.resources
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\obj\Debug\Benchmark.Properties.Resources.resources
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\obj\Debug\Benchmark.csproj.GenerateResource.cache
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\obj\Debug\Benchmark.csproj.CoreCompileInputs.cache
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\obj\Debug\Benchmark.exe
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\obj\Debug\Benchmark.pdb
+C:\Users\verix\OneDrive\Plocha\c# škola\HumanBenchmark\Benchmark\Benchmark\obj\Debug\Benchmark.Aim.resources
