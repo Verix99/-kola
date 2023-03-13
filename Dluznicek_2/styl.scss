@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+header {
+  background-color: #d9d9d9;
+  display: flex;
+  height: 20vh;
+  width: 100%;
+  flex-direction: column;
+  h1 {
+    font-size: 60px;
+  }
+  .clenove_top {
+    display: flex;
+    flex-direction: row;
+  }
+  .platby_top {
+    display: flex;
+    flex-direction: row;
+  }
+  .dluh_top {
+    display: flex;
+    flex-direction: row;
+  }
+}
+main {
+  display: grid;
+  width: 100%;
+  height: 80vh;
+  grid-template-columns: repeat(12, 9rem);
+  grid-template-rows: repeat(12, 9rem);
+  background-color: aqua;
+  gap: 1rem;
+  .clenove {
+    background-color: red;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    button,
+    input {
+      background: none;
+      outline: none;
+      border: none;
+      margin-left: 10px;
+    }
+    .clenove_popis {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      .clenove_nadpis {
+        margin-left: 60px;
+      }
+      .castka_nadpis {
+        margin-left: 100px;
+      }
+    }
+  }
+  .pridat_clena {
+    background-color: #d9d9d9;
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dluh {
+    background-color: #d9d9d9;
+    grid-column-start: 10;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  #new-member-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  #new-debt-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(44, 43, 43);
+    .content {
+      display: flex;
+      align-items: center;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      .delete {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  #tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(42, 35, 35);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #tasks .task .content .text {
+    color: aliceblue;
+    font-size: 1rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+  }
+  #tasks .task .content .number {
+    color: aliceblue;
+    font-size: 1rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+  }
+  .task .actions button {
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .task .actions button:hover {
+    opacity: 0.8;
+  }
+  .task .actions button:active {
+    opacity: 0.6;
+  }
+
+  .task .actions .edit {
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  .task .actions .delete {
+    color: crimson;
+  }
+}

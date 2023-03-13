@@ -40,6 +40,13 @@ button {
   color: aliceblue;
   font-size: 1rem;
 }
+#new-number-input {
+  background-color: rgb(42, 35, 35);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: aliceblue;
+  font-size: 1rem;
+}
 
 #new-task-submit {
   color: blueviolet;
@@ -89,7 +96,9 @@ button {
 }
 
 .task .actions .edit {
-  color: blueviolet;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
 }
 .task .actions .delete {
   color: crimson;

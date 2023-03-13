@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styl.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settle Up</title>
+  </head>
+  <body>
+    <header>
+      <h1>Settle Up</h1>
+      <div class="platby_top">
+        <h3>Platby:</h3>
+        <h3 id="platba">0</h3>
+      </div>
+      <div class="clenove_top">
+        <h3>Členové:</h3>
+        <h4 id="demo">0</h4>
+      </div>
+      <div class="dluh_top">
+        <h3>Dluh:</h3>
+        <h4 id="dluh">0</h4>
+      </div>
+    </header>
+    <main>
+      <div class="clenove">
+        <div class="clenove_popis">
+          <h2 class="clenove_nadpis">Členové</h2>
+          <h2 class="castka_nadpis">Částka</h2>
+        </div>
+        <section class="task-list">
+          <div id="tasks"></div>
+        </section>
+      </div>
+      <div class="pridat_clena">
+        <h3>Přidej člena</h3>
+        <form id="new-member-form">
+          <input
+            type="text"
+            id="new-task-input"
+            placeholder="Jméno nového člena"
+          />
+          <input
+            type="number"
+            id="new-number-input"
+            placeholder="Zadejte číslo"
+          />
+          <input type="submit" id="new-task-submit" value="Přidat člena" />
+        </form>
+      </div>
+      <div class="dluh">
+        <h3>Kolik dluží</h3>
+        <form id="new-debt-form">
+          <input
+            type="number"
+            id="new-debt-input"
+            placeholder="Zadejte číslo"
+          />
+          <input type="button" id="new-debt-submit" value="Přidat částku" />
+        </form>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -18,15 +18,31 @@
           id="new-task-input"
           placeholder="Jméno nového člena"
         />
+        <input
+          type="number"
+          id="new-number-input"
+          placeholder="Zadejte číslo"
+        />
         <input type="submit" id="new-task-submit" value="Přidat člena" />
       </form>
     </header>
     <main>
       <section class="task-list">
         <h2>Členové</h2>
-        <div id="tasks"></div>
+        <div id="tasks">
+          <div class="task">
+            <div class="content">
+              <input type="text" class="text" value="MY shinky task" />
+            </div>
+            <div class="actions">
+              <input class="edit" type="checkbox" />
+            </div>
+          </div>
+        </div>
       </section>
       <button type="submit" class="transaction">zadejte transakci</button>
+      <input name="car" list="anrede" />
+      <datalist id="anrede"></datalist>
     </main>
     <script src="main.js"></script>
   </body>
