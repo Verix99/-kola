@@ -4,7 +4,6 @@ window.addEventListener("load", () => {
   const number = document.querySelector("#new-number-input");
   const list_el = document.querySelector("#tasks");
   const debt = document.querySelector("#new-debt-input");
-  let dluh = 0;
   let platby = 0;
   let count = 0;
 
@@ -18,15 +17,13 @@ window.addEventListener("load", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const check = document.querySelectorAll(
-      'input[type="checkbox"]:checked'
-    ).length;
-
     const task = input.value;
     var num = number.value;
 
     if (!task) {
       alert("Zapište člena!");
+      count -= 1;
+      document.getElementById("demo").innerHTML = count;
       return;
     }
 
@@ -47,7 +44,7 @@ window.addEventListener("load", () => {
 
     let task_number_el = document.createElement("input");
     task_number_el.classList.add("number");
-    task_number_el.setAttribute("id", "clen_penize");
+    task_number_el.setAttribute("id", "clen_penize" + [count]);
     task_number_el.type = "number";
     task_number_el.value = num;
     task_number_el.setAttribute("readonly", "readonly");
@@ -59,7 +56,7 @@ window.addEventListener("load", () => {
     task_action_el.classList.add("actions");
 
     const task_edit_el = document.createElement("input");
-    task_edit_el.setAttribute("id", "checkbox_clen");
+    task_edit_el.setAttribute("id", "checkbox_clen" + [count]);
     task_edit_el.classList.add("edit");
     task_edit_el.type = "checkbox";
 
@@ -86,10 +83,13 @@ window.addEventListener("load", () => {
   });
   //Funkce která počítá transakce
   document.getElementById("new-debt-submit").onclick = function () {
+    let dluh = 0;
     platby += 1;
     document.getElementById("platba").innerHTML = platby;
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const debt_castka = debt.value;
+    debt_pocitani = parseInt(debt_castka);
+    dluh += debt_pocitani;
     function countChecked() {
       let count_1 = 0;
       checkboxes.forEach(function (checkbox) {
@@ -104,13 +104,22 @@ window.addEventListener("load", () => {
     let vysledna_castka_debt = debt_castka / cislo_checkboxu;
     console.log(`Počet zaškrtnutých checkboxů: ${countChecked()}`);
     console.log(vysledna_castka_debt);
-    dluh += debt_castka;
+    let a = 0;
+    let checking = document.querySelectorAll('input[type="checkbox"]').length;
     document.getElementById("dluh").innerHTML = dluh;
-    var check = document.getElementById("checkbox_clen");
-    if (check.checked) {
-      document.getElementById("clen_penize").value = vysledna_castka_debt;
+    for (let i = 0; i <= checking; i++) {
+      a++;
+      var user = document.getElementById("clen_penize" + [a]).value;
+      let bobik = parseInt(user);
+      let total = bobik + vysledna_castka_debt;
+      var check = document.getElementById("checkbox_clen" + [a]);
+      if (check.checked) {
+        document.getElementById("clen_penize" + [a]).value = total;
+        console.log(typeof debt_castka);
+        debt.value = "";
+      }
     }
 
-    debt.value = "";
+    console.log(checking);
   };
 });
