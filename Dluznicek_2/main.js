@@ -7,35 +7,14 @@ window.addEventListener("load", () => {
   let dluh = 0;
   let platby = 0;
   let count = 0;
+
+  //Funkce která počítá členy
   document.getElementById("new-task-submit").onclick = function () {
-    count += 1; //sčítání členů
+    count += 1;
     document.getElementById("demo").innerHTML = count;
-  }; //sčítání členů
-
-  document.getElementById("new-debt-submit").onclick = function () {
-    platby += 1; //sčítání členů
-    document.getElementById("platba").innerHTML = platby;
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const debt_castka = debt.value;
-    function countChecked() {
-      let count_1 = 0;
-      checkboxes.forEach(function (checkbox) {
-        if (checkbox.checked) {
-          count_1++;
-        }
-      });
-
-      return count_1;
-    }
-    const cislo_checkboxu = countChecked();
-    let vysledna_castka_debt = debt_castka / cislo_checkboxu;
-    console.log(`Počet zaškrtnutých checkboxů: ${countChecked()}`);
-    console.log(vysledna_castka_debt);
-    dluh = dluh + debt_castka;
-    document.getElementById("dluh").innerHTML = dluh;
-    debt.value = "";
   };
 
+  //Funkce pro přidávání členů
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -44,7 +23,7 @@ window.addEventListener("load", () => {
     ).length;
 
     const task = input.value;
-    const num = number.value;
+    var num = number.value;
 
     if (!task) {
       alert("Zapište člena!");
@@ -61,12 +40,14 @@ window.addEventListener("load", () => {
 
     const task_input_el = document.createElement("input");
     task_input_el.classList.add("text");
+    task_input_el.setAttribute("id", "clen_jmeno");
     task_input_el.type = "text";
     task_input_el.value = task;
     task_input_el.setAttribute("readonly", "readonly");
 
-    const task_number_el = document.createElement("input");
+    let task_number_el = document.createElement("input");
     task_number_el.classList.add("number");
+    task_number_el.setAttribute("id", "clen_penize");
     task_number_el.type = "number";
     task_number_el.value = num;
     task_number_el.setAttribute("readonly", "readonly");
@@ -78,6 +59,7 @@ window.addEventListener("load", () => {
     task_action_el.classList.add("actions");
 
     const task_edit_el = document.createElement("input");
+    task_edit_el.setAttribute("id", "checkbox_clen");
     task_edit_el.classList.add("edit");
     task_edit_el.type = "checkbox";
 
@@ -95,10 +77,40 @@ window.addEventListener("load", () => {
     input.value = "";
     number.value = "";
 
+    //mazání členů
     task_delete_el.addEventListener("click", () => {
       list_el.removeChild(task_el);
       count -= 1;
       document.getElementById("demo").innerHTML = count;
     });
   });
+  //Funkce která počítá transakce
+  document.getElementById("new-debt-submit").onclick = function () {
+    platby += 1;
+    document.getElementById("platba").innerHTML = platby;
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const debt_castka = debt.value;
+    function countChecked() {
+      let count_1 = 0;
+      checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+          count_1++;
+        }
+      });
+
+      return count_1;
+    }
+    const cislo_checkboxu = countChecked();
+    let vysledna_castka_debt = debt_castka / cislo_checkboxu;
+    console.log(`Počet zaškrtnutých checkboxů: ${countChecked()}`);
+    console.log(vysledna_castka_debt);
+    dluh += debt_castka;
+    document.getElementById("dluh").innerHTML = dluh;
+    var check = document.getElementById("checkbox_clen");
+    if (check.checked) {
+      document.getElementById("clen_penize").value = vysledna_castka_debt;
+    }
+
+    debt.value = "";
+  };
 });
