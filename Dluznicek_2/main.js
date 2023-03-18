@@ -4,8 +4,11 @@ window.addEventListener("load", () => {
   const number = document.querySelector("#new-number-input");
   const list_el = document.querySelector("#tasks");
   const debt = document.querySelector("#new-debt-input");
+  const vyber = document.querySelector("#clenove_vyber");
   let platby = 0;
   let count = 0;
+  let dluh = 0;
+  var mycars = new Array();
 
   //Funkce která počítá členy
   document.getElementById("new-task-submit").onclick = function () {
@@ -27,6 +30,15 @@ window.addEventListener("load", () => {
       return;
     }
 
+    mycars[count] = task;
+
+    var options = "";
+
+    for (var i = 0; i < mycars.length; i++) {
+      options += '<option value="' + mycars[i] + '" />';
+    }
+    document.getElementById("anrede").innerHTML = options;
+
     const task_el = document.createElement("div");
     task_el.classList.add("task");
 
@@ -37,7 +49,7 @@ window.addEventListener("load", () => {
 
     const task_input_el = document.createElement("input");
     task_input_el.classList.add("text");
-    task_input_el.setAttribute("id", "clen_jmeno");
+    task_input_el.setAttribute("id", "clen_jmeno" + [count]);
     task_input_el.type = "text";
     task_input_el.value = task;
     task_input_el.setAttribute("readonly", "readonly");
@@ -46,7 +58,7 @@ window.addEventListener("load", () => {
     task_number_el.classList.add("number");
     task_number_el.setAttribute("id", "clen_penize" + [count]);
     task_number_el.type = "number";
-    task_number_el.value = num;
+    task_number_el.value = 0;
     task_number_el.setAttribute("readonly", "readonly");
 
     task_content_el.appendChild(task_input_el);
@@ -83,13 +95,13 @@ window.addEventListener("load", () => {
   });
   //Funkce která počítá transakce
   document.getElementById("new-debt-submit").onclick = function () {
-    let dluh = 0;
     platby += 1;
     document.getElementById("platba").innerHTML = platby;
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const debt_castka = debt.value;
+    let debt_castka = parseInt(debt.value);
+    dluh = dluh + debt_castka;
+    document.getElementById("dluh").value = dluh;
     debt_pocitani = parseInt(debt_castka);
-    dluh += debt_pocitani;
     function countChecked() {
       let count_1 = 0;
       checkboxes.forEach(function (checkbox) {
@@ -111,15 +123,29 @@ window.addEventListener("load", () => {
       a++;
       var user = document.getElementById("clen_penize" + [a]).value;
       let bobik = parseInt(user);
-      let total = bobik + vysledna_castka_debt;
+      let total = bobik - vysledna_castka_debt;
       var check = document.getElementById("checkbox_clen" + [a]);
+      var clen = document.getElementById("clen_jmeno" + [a]).value;
+      var clen_div = vyber.value;
+      let castka_rozdeleni = debt_castka - vysledna_castka_debt;
+      let oktoput = bobik + castka_rozdeleni;
+      let neskrtnuty = bobik + debt_castka;
       if (check.checked) {
-        document.getElementById("clen_penize" + [a]).value = total;
-        console.log(typeof debt_castka);
-        debt.value = "";
+        document.getElementById("clen_penize" + [a]).value = total.toFixed(2);
+      }
+      if (clen == clen_div) {
+        if (check.checked) {
+          document.getElementById("clen_penize" + [a]).value =
+            oktoput.toFixed(2);
+          debt.value = "";
+          vyber.value = "";
+        } else {
+          document.getElementById("clen_penize" + [a]).value =
+            neskrtnuty.toFixed(2);
+        }
       }
     }
-
-    console.log(checking);
+    console.log(oktoput);
+    console.log(total);
   };
 });
