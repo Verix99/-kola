@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,30 +12,37 @@ body {
 header {
   background-color: #d9d9d9;
   display: flex;
-  height: 20vh;
+  height: 18vh;
   width: 100%;
   flex-direction: column;
 }
 header h1 {
+  font-family: "Roboto", sans-serif;
   font-size: 60px;
 }
 header .clenove_top {
   display: flex;
   flex-direction: row;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
 }
 header .platby_top {
   display: flex;
   flex-direction: row;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
 }
 header .dluh_top {
   display: flex;
   flex-direction: row;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
   display: grid;
   width: 100%;
-  height: 80vh;
+  height: 82vh;
   grid-template-columns: repeat(12, 9rem);
   grid-template-rows: repeat(12, 9rem);
   background-color: aqua;
@@ -48,6 +56,9 @@ main .clenove {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 1rem;
 }
 main .clenove h2 {
   margin-top: 20px;
@@ -64,6 +75,8 @@ main .clenove .clenove_popis {
   display: flex;
   width: 100%;
   flex-direction: row;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 main .clenove .clenove_popis .clenove_nadpis {
   margin-left: 60px;
@@ -76,25 +89,29 @@ main .pridat_clena {
   grid-column-start: 7;
   grid-column-end: 9;
   grid-row-start: 2;
-  grid-row-end: 5;
+  grid-row-end: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 1rem;
 }
 main .dluh {
   background-color: #d9d9d9;
   grid-column-start: 10;
   grid-column-end: 12;
   grid-row-start: 2;
-  grid-row-end: 5;
   display: flex;
   align-items: center;
   flex-direction: column;
+  border-radius: 1rem;
 }
 main #new-member-form {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+main #new-number-input {
+  display: none;
 }
 main #new-debt-form {
   display: flex;
@@ -131,6 +148,9 @@ main #tasks .task .content .text {
   width: 100%;
   display: block;
   transition: 0.4s;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
 }
 main #tasks .task .content .number {
   color: aliceblue;
@@ -138,6 +158,7 @@ main #tasks .task .content .number {
   width: 100%;
   display: block;
   transition: 0.4s;
+  font-family: "Roboto", sans-serif;
 }
 main .task .actions button {
   cursor: pointer;
@@ -151,7 +172,7 @@ main .task .actions button:hover {
 main .task .actions button:active {
   opacity: 0.6;
 }
-main .task .actions .edit {
+main .task .actions .check {
   height: 25px;
   width: 25px;
   background-color: #eee;

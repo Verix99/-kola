@@ -8,100 +8,103 @@ window.addEventListener("load", () => {
   let platby = 0;
   let count = 0;
   let dluh = 0;
-  var mycars = new Array();
+  var celnove_list = new Array();
 
   //Funkce která počítá členy
   document.getElementById("new-task-submit").onclick = function () {
     count += 1;
-    document.getElementById("demo").innerHTML = count;
+    document.getElementById("clen_pocet").innerHTML = count;
   };
 
   //Funkce pro přidávání členů
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const task = input.value;
+    const clen = input.value;
     var num = number.value;
 
-    if (!task) {
+    if (!clen) {
       alert("Zapište člena!");
       count -= 1;
-      document.getElementById("demo").innerHTML = count;
+      document.getElementById("clen_pocet").innerHTML = count;
       return;
     }
 
-    mycars[count] = task;
+    celnove_list[count] = clen;
 
     var options = "";
 
-    for (var i = 0; i < mycars.length; i++) {
-      options += '<option value="' + mycars[i] + '" />';
+    for (var i = 0; i < celnove_list.length; i++) {
+      options += '<option value="' + celnove_list[i] + '" />';
     }
     document.getElementById("anrede").innerHTML = options;
 
-    const task_el = document.createElement("div");
-    task_el.classList.add("task");
+    const clen_el = document.createElement("div");
+    clen_el.classList.add("task");
 
-    const task_content_el = document.createElement("div");
-    task_content_el.classList.add("content");
+    const clen_content_el = document.createElement("div");
+    clen_content_el.classList.add("content");
 
-    task_el.appendChild(task_content_el);
+    clen_el.appendChild(clen_content_el);
 
-    const task_input_el = document.createElement("input");
-    task_input_el.classList.add("text");
-    task_input_el.setAttribute("id", "clen_jmeno" + [count]);
-    task_input_el.type = "text";
-    task_input_el.value = task;
-    task_input_el.setAttribute("readonly", "readonly");
+    const clen_input_el = document.createElement("input");
+    clen_input_el.classList.add("text");
+    clen_input_el.setAttribute("id", "clen_jmeno" + [count]);
+    clen_input_el.type = "text";
+    clen_input_el.value = clen;
+    clen_input_el.setAttribute("readonly", "readonly");
 
-    let task_number_el = document.createElement("input");
-    task_number_el.classList.add("number");
-    task_number_el.setAttribute("id", "clen_penize" + [count]);
-    task_number_el.type = "number";
-    task_number_el.value = 0;
-    task_number_el.setAttribute("readonly", "readonly");
+    let clen_number_el = document.createElement("input");
+    clen_number_el.classList.add("number");
+    clen_number_el.setAttribute("id", "clen_penize" + [count]);
+    clen_number_el.type = "number";
+    clen_number_el.value = 0;
+    clen_number_el.setAttribute("readonly", "readonly");
 
-    task_content_el.appendChild(task_input_el);
-    task_content_el.appendChild(task_number_el);
+    clen_content_el.appendChild(clen_input_el);
+    clen_content_el.appendChild(clen_number_el);
 
-    const task_action_el = document.createElement("div");
-    task_action_el.classList.add("actions");
+    const clen_action_el = document.createElement("div");
+    clen_action_el.classList.add("actions");
 
-    const task_edit_el = document.createElement("input");
-    task_edit_el.setAttribute("id", "checkbox_clen" + [count]);
-    task_edit_el.classList.add("edit");
-    task_edit_el.type = "checkbox";
+    const clen_check_el = document.createElement("input");
+    clen_check_el.setAttribute("id", "checkbox_clen" + [count]);
+    clen_check_el.classList.add("check");
+    clen_check_el.type = "checkbox";
 
-    const task_delete_el = document.createElement("button");
-    task_delete_el.classList.add("delete");
-    task_delete_el.innerHTML = "Delete";
+    const clen_delete_el = document.createElement("button");
+    clen_delete_el.classList.add("delete");
+    clen_delete_el.innerHTML = "Delete";
 
-    task_action_el.appendChild(task_edit_el);
-    task_action_el.appendChild(task_delete_el);
+    clen_action_el.appendChild(clen_check_el);
+    clen_action_el.appendChild(clen_delete_el);
 
-    task_el.appendChild(task_action_el);
+    clen_el.appendChild(clen_action_el);
 
-    list_el.appendChild(task_el);
+    list_el.appendChild(clen_el);
 
     input.value = "";
     number.value = "";
 
     //mazání členů
-    task_delete_el.addEventListener("click", () => {
-      list_el.removeChild(task_el);
+    clen_delete_el.addEventListener("click", () => {
+      list_el.removeChild(clen_el);
       count -= 1;
-      document.getElementById("demo").innerHTML = count;
+      document.getElementById("clen_pocet").innerHTML = count;
     });
   });
   //Funkce která počítá transakce
   document.getElementById("new-debt-submit").onclick = function () {
+    //počet plateb
     platby += 1;
     document.getElementById("platba").innerHTML = platby;
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    //počítání dluhu
     let debt_castka = parseInt(debt.value);
     dluh = dluh + debt_castka;
-    document.getElementById("dluh").value = dluh;
-    debt_pocitani = parseInt(debt_castka);
+    document.getElementById("dluh").innerHTML = dluh;
+
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     function countChecked() {
       let count_1 = 0;
       checkboxes.forEach(function (checkbox) {
@@ -115,37 +118,38 @@ window.addEventListener("load", () => {
     const cislo_checkboxu = countChecked();
     let vysledna_castka_debt = debt_castka / cislo_checkboxu;
     console.log(`Počet zaškrtnutých checkboxů: ${countChecked()}`);
-    console.log(vysledna_castka_debt);
     let a = 0;
     let checking = document.querySelectorAll('input[type="checkbox"]').length;
-    document.getElementById("dluh").innerHTML = dluh;
+
+    //projetí všech divu
     for (let i = 0; i <= checking; i++) {
       a++;
       var user = document.getElementById("clen_penize" + [a]).value;
-      let bobik = parseInt(user);
-      let total = bobik - vysledna_castka_debt;
+      let user_parse = parseInt(user);
+      let total_num = user_parse - vysledna_castka_debt;
       var check = document.getElementById("checkbox_clen" + [a]);
-      var clen = document.getElementById("clen_jmeno" + [a]).value;
-      var clen_div = vyber.value;
+      var clen_jmeno = document.getElementById("clen_jmeno" + [a]).value;
+      var clen_list = vyber.value;
       let castka_rozdeleni = debt_castka - vysledna_castka_debt;
-      let oktoput = bobik + castka_rozdeleni;
-      let neskrtnuty = bobik + debt_castka;
+      let castka_div = user_parse + castka_rozdeleni;
+      let neskrtnuty_checkbox = user_parse + debt_castka;
       if (check.checked) {
-        document.getElementById("clen_penize" + [a]).value = total.toFixed(2);
+        document.getElementById("clen_penize" + [a]).value =
+          total_num.toFixed(2);
       }
-      if (clen == clen_div) {
+      if (clen_jmeno == clen_list) {
         if (check.checked) {
           document.getElementById("clen_penize" + [a]).value =
-            oktoput.toFixed(2);
+            castka_div.toFixed(2);
           debt.value = "";
           vyber.value = "";
         } else {
           document.getElementById("clen_penize" + [a]).value =
-            neskrtnuty.toFixed(2);
+            neskrtnuty_checkbox.toFixed(2);
+          debt.value = "";
+          vyber.value = "";
         }
       }
     }
-    console.log(oktoput);
-    console.log(total);
   };
 });

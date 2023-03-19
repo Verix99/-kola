@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icon.png" />
     <title>Settle Up</title>
   </head>
   <body>
@@ -16,11 +17,11 @@
       </div>
       <div class="clenove_top">
         <h3>Členové:</h3>
-        <h4 id="demo">0</h4>
+        <h3 id="clen_pocet">0</h3>
       </div>
       <div class="dluh_top">
-        <h3>Zaplaceno:Kč</h3>
-        <h4 id="dluh">0</h4>
+        <h3>Zaplaceno:</h3>
+        <h3 id="dluh">0</h3>
       </div>
     </header>
     <main>
@@ -50,12 +51,12 @@
         </form>
       </div>
       <div class="dluh">
-        <h3>Kolik dluží</h3>
+        <h3>Přidej platbu</h3>
         <form id="new-debt-form">
           <input
             type="number"
             id="new-debt-input"
-            placeholder="Zadejte číslo"
+            placeholder="Zadejte částku"
           />
           <input
             name="clen_vyber"
@@ -68,7 +69,6 @@
         </form>
       </div>
     </main>
-    <footer></footer>
     <script src="main.js"></script>
   </body>
 </html>
