@@ -16,10 +16,10 @@ def screenshot():
 #funkce na porovnání obrázků a těžení bloku  
 def porovnani():
     img = cv2.imread("screen.png")
-    blok = cv2.imread("coble.png")
+    blok = cv2.imread("coble.jpg")
     result = cv2.matchTemplate(img , blok, cv2.TM_CCOEFF_NORMED)
     min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
-    if max_val > 0.8:
+    if max_val > 0.4:
         pt.mouseDown()
         sleep(0.6)
         pt.mouseUp()

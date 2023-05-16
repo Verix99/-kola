@@ -5,63 +5,147 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icon.png" />
     <title>Settle Up</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
-      <h1>Settle Up</h1>
-      <div class="platby_top">
-        <h3>Platby:</h3>
-        <h3 id="platba">0</h3>
-      </div>
-      <div class="clenove_top">
-        <h3>Členové:</h3>
-        <h4 id="demo">0</h4>
-      </div>
-      <div class="dluh_top">
-        <h3>Dluh:</h3>
-        <h4 id="dluh"></h4>
-      </div>
+      <h1>Dlužníček</h1>
     </header>
     <main>
-      <div class="clenove">
-        <div class="clenove_popis">
-          <h2 class="clenove_nadpis">Členové</h2>
-          <h2 class="castka_nadpis">Částka</h2>
+      <section class="content-left">
+        <div class="members">
+          <div class="members-title">
+            <div class="title-member">Členové</div>
+            <div class="title-debt">Dluh</div>
+            <div class="title-choose">Vybrat</div>
+            <div class="title-delete">Smazat</div>
+          </div>
+
+          <section class="task-list">
+            <div id="tasks"></div>
+          </section>
         </div>
-        <section class="task-list">
-          <div id="tasks"></div>
-        </section>
-      </div>
-      <div class="pridat_clena">
-        <h3>Přidej člena</h3>
-        <form id="new-member-form">
-          <input
-            type="text"
-            id="new-task-input"
-            placeholder="Jméno nového člena"
-          />
-          <input
-            type="number"
-            id="new-number-input"
-            placeholder="Zadejte číslo"
-          />
-          <input type="submit" id="new-task-submit" value="Přidat člena" />
-        </form>
-      </div>
-      <div class="dluh">
-        <h3>Kolik dluží</h3>
-        <form id="new-debt-form">
-          <input
-            type="number"
-            id="new-debt-input"
-            placeholder="Zadejte číslo"
-          />
-          <input type="button" id="new-debt-submit" value="Přidat částku" />
-        </form>
-      </div>
+      </section>
+      <section class="content-right">
+        <div class="content-wrap">
+          <div class="main-info">
+            <div class="payments-number">
+              <h3>Počet plateb:</h3>
+              <h3 id="platba">0</h3>
+            </div>
+            <div class="member-number">
+              <h3>Počet členů:</h3>
+              <h3 id="clen_pocet">0</h3>
+            </div>
+            <div class="total-debt-number">
+              <h3>Celkem zaplaceno:</h3>
+              <h3 id="dluh">0</h3>
+              <span> Kč</span>
+            </div>
+          </div>
+          <form id="new-debt-form">
+            <div class="debt-title">Přidat platbu</div>
+            <div class="debt-inputs">
+              <input
+                type="number"
+                id="new-debt-input"
+                placeholder="Kolik zaplatil?"
+              />
+              <input
+                name="member_choose"
+                id="clenove_vyber"
+                list="member-list"
+                placeholder="Kdo platil?"
+              />
+            </div>
+            <div class="debt-warning">
+              <img src="./images/Warning.png" alt="" />
+              <p>Vyberte za koho platil</p>
+            </div>
+            <datalist id="member-list"></datalist>
+            <input type="button" id="new-debt-submit" value="Přidat platbu" />
+          </form>
+          <div class="add-member">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              Přidat člena
+            </button>
+            <div
+              class="modal fade"
+              id="staticBackdrop"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                      Přidej člena
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="pridat_clena">
+                      <h3>Přidej člena</h3>
+                      <form id="new-member-form">
+                        <input
+                          type="text"
+                          id="new-task-inputik"
+                          placeholder="Jméno nového člena"
+                        />
+                      </form>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Zavřít
+                    </button>
+                    <input
+                      type="button"
+                      class="btn btn-primary_1"
+                      id="newbtn"
+                      value="Přidat člena"
+                      data-bs-dismiss="modal"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p>2023 © Petr Vepřek</p>
+    </footer>
     <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

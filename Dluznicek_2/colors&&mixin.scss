@@ -1,0 +1,23 @@
+// FONT
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;900&display=swap");
+// PŘEHLED BAREV
+$backround: #f0e6e6;
+$gray: #d9d9d9;
+$btn: #6db3f4;
+$white: #ffffff;
+$red: #fd1414;
+$black: #000000;
+$boxColor: #282727;
+//MIXIN
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin font($size, $weight) {
+  font-family: "Inter", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+}
